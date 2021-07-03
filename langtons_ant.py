@@ -20,12 +20,6 @@ ANT_DOWN = "ANT_DOWN.png"
 BLACK = "b"
 WHITE = "w"
 
-'''Maybe come back to this
-# grid files:
-BLACK_GRID_SPACE = "Black Grid Square 60x60.png"
-WHITE_GRID_SPACE = "White Grid Square 60x60.png"'''
-
-
 def make_grid():
     '''
     Creates a 7x7 grid of white squares. This is done by making a two-dimensional grid
@@ -77,8 +71,6 @@ def draw_grid(grid, gui):
         for j in range(grid_length):
             gui.line(0, 60*i, 420, 60*i, "grey")
             gui.line(60*i, 0, 60*i, 420, "grey")
-    
-    # gui.update_frame(10)
 
 def draw_ant(gui, ant_x_position, ant_y_position, direction):
     if direction == LEFT:
@@ -91,7 +83,6 @@ def draw_ant(gui, ant_x_position, ant_y_position, direction):
         gui.image(60*ant_x_position, 60*ant_y_position, 1, 1, ANT_DOWN)
     
     gui.update_frame(5)
-        
 
 def turn_ant(grid, ant_x_position, ant_y_position, ant_direction):
     '''
